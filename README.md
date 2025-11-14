@@ -93,15 +93,6 @@ You can add:
 **Sadia Mushtaq**
 Weather Forecasting using LSTM Neural Networks.
 
-LSTM (Long Short-Term Memory) is a type of recurrent neural network designed to learn time-dependent patterns. It is ideal for weather forecasting because weather depends on previous values.
-
- model:
-
-* Uses one or more LSTM layers
-* Uses Dense layer for final temperature output
-* Learns from SEQ_LEN (sequence length) past data points
-
-
 ##  Future Improvements
 
 You can add:
