@@ -63,27 +63,10 @@ The dataset should contain temperature values (in °F). Example:
 
 Inside the Jupyter notebook:
 
-```
-model.fit(X_train, y_train, epochs=20, batch_size=32)
-```
-
-* **Epochs:** how many times model sees full dataset
-* **Batch size:** how many samples per gradient step
-
 plot:
 
 * Actual vs Predicted temperatures
 * Loss curve during training
-
-Example code snapshot:
-
-```
-plt.plot(actual, label='Actual')
-plt.plot(predicted, label='Predicted')
-plt.legend()
-plt.show()
-
-## Model Evaluation
 
 Metrics used:
 
