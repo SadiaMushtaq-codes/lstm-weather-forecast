@@ -1,36 +1,129 @@
-# lstm-weather-forecast
-Real-time weather forecasting using Bidirectional LSTM + MPI4Py + Streamlit dashboard
-# SkyNet – AI Weather Forecaster (Talent Festival Demo)
+# Weather Forecasting Project
 
-**Live Demo:** https://your-streamlit-app.streamlit.app  
-**GitHub:** https://github.com/yourname/skynet-weather
+This project uses machine learning (specifically **LSTM neural networks**) to predict future weather temperatures based on historical data. The model is trained using a sequence of past temperature values and learns patterns over time to make accurate predictions.
 
-## Features
-- Multivariate **Bi-LSTM** with uncertainty
-- **MPI4Py** parallel training (4× speedup)
-- Real-time **OpenWeatherMap** data
-- Interactive **Streamlit** dashboard + **Folium** map
-- Full evaluation vs ARIMA baseline
 
-## Quick Start
+## Project Description
 
-```bash
-# 1. Clone
-git clone https://github.com/yourname/skynet-weather.git
-cd skynet-weather
+This project focuses on **time-series forecasting** of temperature values for Hyderabad, Sindh. It takes past temperature data and predicts the next value.
 
-# 2. Install
-pip install -r requirements.txt
-# (for MPI) sudo apt-get install openmpi-bin libopenmpi-dev   # Ubuntu
+###  Key Features
 
-# 3. Generate sample data
-python generate_sample_data.py
+* Preprocessing of weather dataset
+* Normalisation using MinMaxScaler
+* Preparing sequences for LSTM
+* LSTM model creation
+* Training & evaluation
+* Plotting actual vs predicted results
 
-# 4. Train (serial first)
-python train_lstm.py
 
-# 5. Benchmark speedup
-python mpi_speed_test.py
+## Model Used: LSTM
 
-# 6. Run dashboard
-streamlit run app.py
+LSTM (Long Short-Term Memory) is a type of recurrent neural network designed to learn time-dependent patterns. It is ideal for weather forecasting because weather depends on previous values.
+
+ model:
+
+* Uses one or more LSTM layers
+* Uses Dense layer for final temperature output
+* Learns from SEQ_LEN (sequence length) past data points
+
+
+##  Requirements
+
+Install the required libraries:
+
+pip install numpy pandas matplotlib tensorflow scikit-learn
+
+If using newer TensorFlow:
+
+pip install tensorflow==2.17
+```
+
+(Compatible with Python 3.10.0)
+
+---
+
+## Input Data
+
+The dataset should contain temperature values (in °F). Example:
+
+
+## Data Preprocessing
+
+* Load dataset using Pandas
+* Select temperature column
+* Convert to NumPy array
+* Apply MinMaxScaler
+* Create training sequences
+* Split into train & test sets
+
+---
+
+## Training the Model
+
+Inside the Jupyter notebook:
+
+```
+model.fit(X_train, y_train, epochs=20, batch_size=32)
+```
+
+* **Epochs:** how many times model sees full dataset
+* **Batch size:** how many samples per gradient step
+
+After training, the model is saved using:
+
+```
+model.save('weather_model.keras')
+```
+
+---
+
+##  Results
+
+plot:
+
+* Actual vs Predicted temperatures
+* Loss curve during training
+
+Example code snapshot:
+
+```
+plt.plot(actual, label='Actual')
+plt.plot(predicted, label='Predicted')
+plt.legend()
+plt.show()
+```
+
+---
+
+## Model Evaluation
+
+Metrics used:
+
+* **MSE (Mean Squared Error)**
+* **RMSE**
+
+Example:
+
+```
+Global Test MSE: 0.0106
+```
+
+This tells how close predictions are to real values.
+
+---
+
+##  Future Improvements
+
+You can add:
+
+* Multi-feature input (humidity, wind speed, rainfall)
+* Hyperparameter tuning
+* GRU / deeper LSTM layers
+* Flask web app for live weather predictions
+
+
+##  Author
+
+**Sadia Mushtaq**
+Weather Forecasting using LSTM Neural Networks.
