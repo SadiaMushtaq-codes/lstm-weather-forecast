@@ -1,0 +1,12 @@
+tensorflow==2.17.0
+mpi4py
+pandas
+numpy
+scikit-learn
+requests
+streamlit
+plotly
+folium
+matplotlib
+seaborn
+statsmodels
