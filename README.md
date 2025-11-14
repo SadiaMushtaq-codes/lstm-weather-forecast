@@ -102,36 +102,6 @@ LSTM (Long Short-Term Memory) is a type of recurrent neural network designed to 
 * Learns from SEQ_LEN (sequence length) past data points
 
 
-## Data Preprocessing
-
-* Load dataset using Pandas
-* Select temperature column
-* Convert to NumPy array
-* Apply MinMaxScaler
-* Create training sequences
-* Split into train & test sets
-
-
-## Training the Model
-
-Inside the Jupyter notebook:
-
-plot:
-
-* Actual vs Predicted temperatures
-* Loss curve during training
-
-Metrics used:
-
-* **MSE (Mean Squared Error)**
-* **RMSE**
-
-Example:
-
-Global Test MSE: 0.0106
-
-This tells how close predictions are to real values.
-
 ##  Future Improvements
 
 You can add:
