@@ -37,7 +37,7 @@ pip install numpy pandas matplotlib tensorflow scikit-learn
 If using newer TensorFlow:
 
 pip install tensorflow==2.17
-```
+
 
 (Compatible with Python 3.10.0)
 
