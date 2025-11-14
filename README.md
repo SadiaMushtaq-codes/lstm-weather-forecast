@@ -41,7 +41,6 @@ pip install tensorflow==2.17
 
 (Compatible with Python 3.10.0)
 
----
 
 ## Input Data
 
@@ -57,7 +56,6 @@ The dataset should contain temperature values (in °F). Example:
 * Create training sequences
 * Split into train & test sets
 
----
 
 ## Training the Model
 
